@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Haven - Women's Luxury Bags & Shoes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #ff69b4; /* Hot Pink for accents */
+            --secondary-color: #9370db; /* Medium Purple for buttons */
+            --accent-color: #98fb98; /* Pale Green for highlights */
+            --soft-bg: #fdf2f8; /* Soft pinkish background */
+            --text-primary: #333;
+            --text-secondary: #666;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--soft-bg);
+            color: var(--text-primary);
+        }
+        .navbar {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) !important;
+            box-shadow: 0 2px 10px rgba(255, 105, 180, 0.3);
+        }
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        .nav-link {
+            color: white !important;
+            transition: color 0.3s;
+        }
+        .nav-link:hover {
+            color: var(--accent-color) !important;
+        }
+        .hero-section {
+            background: linear-gradient(rgba(255, 105, 180, 0.1), rgba(147, 112, 219, 0.1)), url('https://source.unsplash.com/random/1600x900/?fashion,women,handbag');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+        .hero-section h1 {
+            color: white;
+            font-weight: bold;
+        }
+        .btn-primary {
+            background-color: #25D366; /* WhatsApp Green */
+            border-color: #25D366;
+            transition: background-color 0.3s;
+        }
+        .btn-primary:hover {
+            background-color: #128C7E; /* Darker WhatsApp Green */
+            border-color: #128C7E;
+        }
+        .card {
+            border: none;
+            box-shadow: 0 4px 15px rgba(255, 105, 180, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            overflow: hidden;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(255, 105, 180, 0.2);
+        }
+        .card-img-top {
+            height: 300px;
+            object-fit: cover;
+        }
+        .section-title {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        .feature-section {
+            background-color: #f8f1f9;
+        }
+        .footer {
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            color: white;
+        }
+        .social-icons a {
+            color: pink;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        .social-icons a:hover {
+            color: var(--accent-color);
+        }
+        .feature-card {
+            background: none;
+            border: none;
+            text-align: center;
+        }
+        .feature-card i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="fas fa-heart me-2"></i>Fashion Haven</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home"><i class="fas fa-home me-1"></i>Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#bags"><i class="fas fa-handbag me-1"></i>Bags</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#shoes"><i class="fas fa-shoe-prints me-1"></i>Shoes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about"><i class="fas fa-info-circle me-1"></i>About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact"><i class="fas fa-envelope me-1"></i>Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section py-5 d-flex align-items-center min-vh-100">
+        <div class="container" style="background-image: url('images/backg.jpg'); background-size: cover; background-position: center';">
+            <div class="row align-items-center">
+                <div class="col-lg-6" style="background-image: url('images/backg.jpg'); background-size: cover; background-position: center'; height: 520px;">
+                    <h1 class="display-3 fw-bold mb-4">Elevate Your Style</h1>
+                    <p class="lead mb-4">Discover an exquisite collection of luxury bags and shoes designed to complement the modern woman's elegance and sophistication. Crafted with care, our pieces are your perfect companions for every occasion.</p>
+                    <a href="#bags" class="btn btn-primary btn-lg me-3">Shop Bags</a>
+                    <a href="#shoes" class="btn btn-outline-light btn-lg">Explore Shoes</a>
+                </div>
+                <div class="col-lg-6">
+                    <img src="images/bg.jpg" class="img-fluid rounded shadow" alt="Woman with luxury handbag">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="feature-section py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Why Choose Fashion Haven?</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card feature-card">
+                        <i class="fas fa-star"></i>
+                        <h5 class="card-title">Premium Quality</h5>
+                        <p class="card-text">Our bags and shoes are crafted from the finest materials, ensuring durability and timeless style.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card feature-card">
+                        <i class="fas fa-heart"></i>
+                        <h5 class="card-title">Unique Designs</h5>
+                        <p class="card-text">Stand out with our exclusive designs that blend modern trends with classic elegance.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card feature-card">
+                        <i class="fas fa-shipping-fast"></i>
+                        <h5 class="card-title">Fast Delivery</h5>
+                        <p class="card-text">Enjoy swift and reliable shipping to bring your favorite pieces to your doorstep.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Women's Bags Section -->
+    <section id="bags" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Luxury Bags</h2>
+            <p class="text-center mb-5">Explore our curated collection of handbags, from chic totes to elegant clutches, designed to elevate your wardrobe.</p>
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="card h-100">
+                        <img src="images/image1.JPG" class="card-img-top" alt="Leather Tote">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Classic Leather Tote</h5>
+                            <p class="card-text text-secondary flex-grow-1">25000 ugx</p>
+                            <a href="https://wa.me/1234567890?text=I'm%20interested%20in%20the%20Classic%20Leather%20Tote%20priced%20at%20$129.99" class="btn btn-primary mt-auto" target="_blank"><i class="fab fa-whatsapp me-1"></i>Contact via WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card h-100">
+                        <img src="images/image2.JPG" class="card-img-top" alt="Gold Clutch">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Gold Evening Clutch</h5>
+                            <p class="card-text text-secondary flex-grow-1">25000 ugx</p>
+                            <a href="https://wa.me/1234567890?text=I'm%20interested%20in%20the%20Gold%20Evening%20Clutch%20priced%20at%20$79.99" class="btn btn-primary mt-auto" target="_blank"><i class="fab fa-whatsapp me-1"></i>Contact via WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card h-100">
+                        <img src="images/image3.JPG" class="card-img-top" alt="Black Satchel">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Sleek Black Satchel</h5>
+                            <p class="card-text text-secondary flex-grow-1">25000 ugx</p>
+                            <a href="https://wa.me/1234567890?text=I'm%20interested%20in%20the%20Sleek%20Black%20Satchel%20priced%20at%20$99.99" class="btn btn-primary mt-auto" target="_blank"><i class="fab fa-whatsapp me-1"></i>Contact via WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card h-100">
+                        <img src="images/image4.JPG" class="card-img-top" alt="Canvas Tote">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Chic Canvas Tote</h5>
+                            <p class="card-text text-secondary flex-grow-1">25000 ugx</p>
+                            <a href="https://wa.me/1234567890?text=I'm%20interested%20in%20the%20Chic%20Canvas%20Tote%20priced%20at%20$69.99" class="btn btn-primary mt-auto" target="_blank"><i class="fab fa-whatsapp me-1"></i>Contact via WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card h-100">
+                        <img src="images/image5.JPG" class="card-img-top" alt="Crossbody Bag">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Mini Crossbody Bag</h5>
+                            <p class="card-text text-secondary flex-grow-1">25000 ugx</p>
+                            <a href="https://wa.me/1234567890?text=I'm%20interested%20in%20the%20Mini%20Crossbody%20Bag%20priced%20at%20$59.99" class="btn btn-primary mt-auto" target="_blank"><i class="fab fa-whatsapp me-1"></i>Contact via WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card h-100">
+                        <img src="images/image6.JPG" class="card-img-top" alt="Fashion Backpack">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Urban Fashion Backpack</h5>
+                            <p class="card-text text-secondary flex-grow-1">25000 ugx</p>
+                            <a href="https://wa.me/1234567890?text=I'm%20interested%20in%20the%20Urban%20Fashion%20Backpack%20priced%20at%20$89.99" class="btn btn-primary mt-auto" target="_blank"><i class="fab fa-whatsapp me-1"></i>Contact via WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card h-100">
+                        <img src="images/image7.jpg" class="card-img-top" alt="Shoulder Bag">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Elegant Shoulder Bag</h5>
+                            <p class="card-text text-secondary flex-grow-1">25000 ugx</p>
+                            <a href="https://wa.me/1234567890?text=I'm%20interested%20in%20the%20Elegant%20Shoulder%20Bag%20priced%20at%20$109.99" class="btn btn-primary mt-auto" target="_blank"><i class="fab fa-whatsapp me-1"></i>Contact via WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card h-100">
+                        <img src="images/image8.jpg" class="card-img-top" alt="Hobo Bag">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Bohemian Hobo Bag</h5>
+                            <p class="card-text text-secondary flex-grow-1">25000 ugx</p>
+                            <a href="https://wa.me/1234567890?text=I'm%20interested%20in%20the%20Bohemian%20Hobo%20Bag%20priced%20at%20$94.99" class="btn btn-primary mt-auto" target="_blank"><i class="fab fa-whatsapp me-1"></i>Contact via WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Women's Shoes Section -->
+    <section id="shoes" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Stylish Shoes</h2>
+            <p class="text-center mb-5">Step into elegance with our stunning range of women's shoes, from classic heels to comfortable flats.</p>
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="card h-100">
+                        <img src="images/shoe1.jpg" class="card-img-top" alt="Red Heels">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Red Stiletto Heels</h5>
+                            <p class="card-text text-secondary flex-grow-1">25000 ugx</p>
+                            <a href="https://wa.me/1234567890?text=I'm%20interested%20in%20the%20Red%20Stiletto%20Heels%20priced%20at%20$89.99" class="btn btn-primary mt-auto" target="_blank"><i class="fab fa-whatsapp me-1"></i>Contact via WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card h-100">
+                        <img src="images/shoe2.jpg" class="card-img-top" alt="Ballet Flats">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Leather Ballet Flats</h5>
+                            <p class="card-text text-secondary flex-grow-1">25000 ugx</p>
+                            <a href="https://wa.me/1234567890?text=I'm%20interested%20in%20the%20Leather%20Ballet%20Flats%20priced%20at%20$59.99" class="btn btn-primary mt-auto" target="_blank"><i class="fab fa-whatsapp me-1"></i>Contact via WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card h-100">
+                        <img src="images/shoe3.jpg" class="card-img-top" alt="Ankle Boots">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Suede Ankle Boots</h5>
+                            <p class="card-text text-secondary flex-grow-1">25000 ugx</p>
+                            <a href="https://wa.me/1234567890?text=I'm%20interested%20in%20the%20Suede%20Ankle%20Boots%20priced%20at%20$99.99" class="btn btn-primary mt-auto" target="_blank"><i class="fab fa-whatsapp me-1"></i>Contact via WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card h-100">
+                        <img src="images/shoe4.jpg" class="card-img-top" alt="Summer Sandals">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Strappy Summer Sandals</h5>
+                            <p class="card-text text-secondary flex-grow-1">25000 ugx</p>
+                            <a href="https://wa.me/1234567890?text=I'm%20interested%20in%20the%20Strappy%20Summer%20Sandals%20priced%20at%20$49.99" class="btn btn-primary mt-auto" target="_blank"><i class="fab fa-whatsapp me-1"></i>Contact via WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card h-100">
+                        <img src="images/shoe10.jpg" class="card-img-top" alt="White Sneakers">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Classic White Sneakers</h5>
+                            <p class="card-text text-secondary flex-grow-1">25000 ugx</p>
+                            <a href="https://wa.me/1234567890?text=I'm%20interested%20in%20the%20Classic%20White%20Sneakers%20priced%20at%20$69.99" class="btn btn-primary mt-auto" target="_blank"><i class="fab fa-whatsapp me-1"></i>Contact via WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card h-100">
+                        <img src="images/shoe6.jpg" class="card-img-top" alt="Wedge Sandals">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Cork Wedge Sandals</h5>
+                            <p class="card-text text-secondary flex-grow-1">25000 ugx</p>
+                            <a href="https://wa.me/1234567890?text=I'm%20interested%20in%20the%20Cork%20Wedge%20Sandals%20priced%20at%20$79.99" class="btn btn-primary mt-auto" target="_blank"><i class="fab fa-whatsapp me-1"></i>Contact via WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card h-100">
+                        <img src="images/shoe7.jpg" class="card-img-top" alt="Black Pumps">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Pointed-Toe Pumps</h5>
+                            <p class="card-text text-secondary flex-grow-1">25000 ugx</p>
+                            <a href="https://wa.me/1234567890?text=I'm%20interested%20in%20the%20Pointed-Toe%20Pumps%20priced%20at%20$84.99" class="btn btn-primary mt-auto" target="_blank"><i class="fab fa-whatsapp me-1"></i>Contact via WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card h-100">
+                        <img src="images/shoe8.jpg" class="card-img-top" alt="Leather Loafers">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Polished Leather Loafers</h5>
+                            <p class="card-text text-secondary flex-grow-1">25000 ugx</p>
+                            <a href="https://wa.me/1234567890?text=I'm%20interested%20in%20the%20Polished%20Leather%20Loafers%20priced%20at%20$74.99" class="btn btn-primary mt-auto" target="_blank"><i class="fab fa-whatsapp me-1"></i>Contact via WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <img src="images/boti.jpg" class="img-fluid rounded shadow mb-4 mb-lg-0" alt="Our Boutique">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="section-title mb-4">About Fashion Haven</h2>
+                    <p class="lead mb-4">At Fashion Haven, we believe every woman deserves to feel confident and stylish. Our curated collection of luxury bags and shoes is designed to complement your unique style, from everyday essentials to statement pieces for special occasions.</p>
+                    <p>With a focus on quality craftsmanship and timeless design, we source our products from artisans who share our passion for excellence. Let us help you find the perfect accessory to complete your look.</p>
+                    <a href="#contact" class="btn btn-primary">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Get in Touch</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Connect with Us</h4>
+                    <p>Have questions or need assistance? Reach out to our team via WhatsApp or follow us on social media for the latest updates and style inspiration.</p>
+                    <a href="https://wa.me/1234567890?text=Hello,%20I%20have%20a%20question%20about%20your%20products" class="btn btn-primary mb-3" target="_blank"><i class="fab fa-whatsapp me-1"></i>Contact via WhatsApp</a>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <img src="images/fashion.jpg" class="img-fluid rounded shadow" alt="Fashion Accessories">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5><i class="fas fa-heart me-2"></i>Fashion Haven</h5>
+                    <p class="mb-0">Empowering women's style with luxury bags and shoes since 2020.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="social-icons mb-3">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                    <p class="mb-0">&copy; 2025 Fashion Haven. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scrolling for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
